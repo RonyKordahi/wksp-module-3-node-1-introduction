@@ -1,0 +1,12 @@
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    color: whitesmoke;
+}

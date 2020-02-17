@@ -14,6 +14,8 @@ const q7 = (req, res) => res.render('pages/question7');
 const q8 = (req, res) => res.render('pages/question8');
 const q9 = (req, res) => res.render('pages/question9');
 const q10 = (req, res) => res.render('pages/question10');
+const home = (req, res) => res.render('pages/homepage');
+const four = (req, res) => res.render('pages/fourOhFour');
 
 express()
     // This will give us will log more info to the console. see https://www.npmjs.com/package/morgan
@@ -24,6 +26,7 @@ express()
     .set('view engine', 'ejs')
 
     // endpoints
+    .get('/', home)
     .get('/question1', exercisesP1.q1)
     .get('/question2', exercisesP1.q2)
     .get('/question3', exercisesP1.q3)
@@ -34,6 +37,7 @@ express()
     .get('/question8', q8)
     .get('/question9', q9)
     .get('/question10', q10)
+    .get('*', four)
     
     // this serves up the homepage
     .get('/', (req, res) => {
