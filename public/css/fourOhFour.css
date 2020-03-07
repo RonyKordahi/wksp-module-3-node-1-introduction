@@ -1,0 +1,10 @@
+body {
+    background-image: url("404-error.jpg");
+    background-size: cover;
+}
+
+.button {
+    position: fixed;
+    bottom: 10px;
+    left: 45%;
+}
